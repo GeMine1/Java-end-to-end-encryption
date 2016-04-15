@@ -27,7 +27,7 @@ public class RSACipher {
     }
 
     public static byte[] encrypt(byte[] keyBytes, byte[] pubBytes) {
-        KeyFactory keyFactory = null;
+        KeyFactory keyFactory;
         try {
             keyFactory = KeyFactory.getInstance("RSA");
             X509EncodedKeySpec KeySpec = new X509EncodedKeySpec(pubBytes);
